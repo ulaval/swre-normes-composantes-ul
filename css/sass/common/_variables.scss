@@ -1,0 +1,61 @@
+$largeur-maximum-site : 1200px;
+$mapping-fonts : "fonts/";
+$goutiere: 30px; //Marges entre les bloc de contenu, aussi utilisé comme "unité" ailleurs
+$marge-texte: 20px; //Généralement la marge du bas
+
+// Points de rupture pour media queries
+// Mêmes variables que Bootstrap 4
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+// Exemples de media queries
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+//@media (min-width: $sm) { ... }
+
+// Medium devices (tablets, 768px and up)
+//@media (min-width: $md) { ... }
+
+// Large devices (desktops, 992px and up)
+//@media (min-width: $lg) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+//@media (min-width: $xl) { ... }
+
+/* Couleurs */
+$ul-rouge-ul: #e30513;
+$ul-jaune-ul: #ffc103;
+$ul-bleu-ul: #09f;
+
+$ul-gris-pale-01: #f7f7f7;
+$ul-gris-pale-02: #ededed;
+$ul-gris-moyen-01: #dbdbdb;
+$ul-gris-moyen-02: #999;
+$ul-gris-fonce-01: #666;
+$ul-gris-fonce-02: #232323;
+
+$ul-couleur-faaad: #a91e22;
+$ul-couleur-fad: #efa943;
+$ul-couleur-fd: #d82520;
+$ul-couleur-fesp: #650e10;
+$ul-couleur-ffgg: #8dc63f;
+$ul-couleur-hei: #f58029;
+$ul-couleur-flsh: #29bdbc;
+$ul-couleur-fm: #f05323;
+$ul-couleur-fmd: #065199;
+$ul-couleur-fmus: #887e73;
+$ul-couleur-fpha: #089188;
+$ul-couleur-fp: #283f76;
+$ul-couleur-fsa: #717073;
+$ul-couleur-fsaa: #00a176;
+$ul-couleur-fse: #f7a90b;
+$ul-couleur-fsg: #bd252b;
+$ul-couleur-fsi: #62419a;
+$ul-couleur-fss: #4079a2;
+$ul-couleur-ftsr: #4caecf;
