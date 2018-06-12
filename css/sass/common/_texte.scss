@@ -1,0 +1,149 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:900); //Les autres graisses sont chargées dans les normes (_entete.scss)
+body {
+  color: #000;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+a,
+a:active,
+a:visited {
+  color: $ul-bleu-ul;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $ul-bleu-ul;
+  text-decoration: underline;
+}
+
+main {
+  a[href$='.pdf'],
+  a[href$='.doc'],
+  a[href$='.docx'],
+  a[href$='.ppt'],
+  a[href$='.pptx'],
+  a[href$='.xls'],
+  a[href$='.xlsx'] {
+    background: no-repeat right center;
+    padding: 0 $marge-texte 0 0;
+  }
+
+  a[href$='.pdf'] {
+    background-image: url(img/icons-fichiers/pdf.png);
+  }
+
+  a[href$='.doc'],
+  a[href$='.docx'] {
+    background-image: url(img/icons-fichiers/doc.png);
+  }
+
+  a[href$='.ppt'],
+  a[href$='.pptx'] {
+    background-image: url(img/icons-fichiers/ppt.png);
+  }
+
+  a[href$='.xls'],
+  a[href$='.xlsx'] {
+    background-image: url(img/icons-fichiers/xls.png);
+  }
+}
+
+:focus {
+  outline: none !important; // Évite l'ajout d'un halo bleu autour du lien dans Safari
+}
+
+address {
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 700;
+  margin: 0 0 $marge-texte 0;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 36px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+}
+
+h2 {
+  font-size: 26px;
+  line-height: 30px;
+}
+
+h1,
+h2.centre {
+  text-align: center;
+
+  &::after {
+    background-color: $ul-rouge-ul;
+    content: "";
+    display: block;
+    height: 4px;
+    margin: $marge-texte auto 0 auto;
+    width: 40px;
+  }
+}
+
+.boite-texte h2 {
+  text-align: left;
+}
+
+h3 {
+  font-size: 22px;
+  line-height: 28px;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+h5 {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+h6 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  margin: 0 0 $marge-texte 0;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  margin: 0 0 25px 0;
+}
+
+ul,
+ol {
+  font-size: 16px;
+  margin: 0 0 25px 0;
+  padding: 0 0 0 $marge-texte;
+
+  ul,
+  ol {
+    margin: 15px 0 0 0;
+  }
+}
+
+li {
+  line-height: 20px;
+  margin: 0 0 15px 0;
+}
+
+main ul li {
+  list-style-type: disc; //Pour que le 2e niveau soit aussi un disque plein au lieu d'un vide
+}

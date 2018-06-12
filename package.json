@@ -1,0 +1,19 @@
+{
+  "name": "@ulaval/composantes",
+  "private": true,
+  "description": "Composantes réutilisables du Bureau des services Web de l'Université Laval",
+  "devDependencies": {
+    "grunt": "^1.0.2",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-htmllint": "^0.3.0",
+    "grunt-standard": "^3.1.0",
+    "grunt-stylelint": "^0.10.0",
+    "load-grunt-tasks": "^3.5.2",
+    "standard": "^11.0.1",
+    "stylelint": "^9.2.1",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-order": "^0.8.1"
+  }
+}

@@ -1,0 +1,9 @@
+{
+    "id-class-style": "dash",
+    "indent-style": "spaces",
+    "line-no-trailing-whitespace": true,
+    "tag-self-close": "never",
+    "doctype-html5": true,
+    "indent-delta": true,
+    "input-req-label": true
+}
