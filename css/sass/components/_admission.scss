@@ -1,186 +1,218 @@
 @mixin faculte($couleur) {
-	.admission-entete {
-		background-color: $couleur;
-	}
-	a {
-		&:nth-child(1) {
-			background-color: $couleur;
-			background-color: rgba($couleur, 0.95);
-			&:hover {
-				background-color: rgba($couleur, 0.80);
-			}
-		}
-		&:nth-child(2) {
-			background-color: $couleur;
-			background-color: rgba($couleur, 0.85);
-			&:hover {
-				background-color: rgba($couleur, 0.70);
-			}
-		}
-		&:nth-child(3) {
-			background-color: $couleur;
-			background-color: rgba($couleur, 0.9);
-			&:hover {
-				background-color: rgba($couleur, 0.75);
-			}
-		}
-		&:nth-child(4) {
-			background-color: $couleur;
-			background-color: rgba($couleur, 0.95);
-			&:hover {
-				background-color: rgba($couleur, 0.80);
-			}
-		}
-	}
+  .admission-entete {
+    background-color: $couleur;
+  }
+
+  a {
+    &:nth-child(1) {
+      background-color: $couleur;
+      background-color: rgba($couleur, 0.95);
+
+      &:hover {
+        background-color: rgba($couleur, 0.8);
+      }
+    }
+
+    &:nth-child(2) {
+      background-color: $couleur;
+      background-color: rgba($couleur, 0.85);
+
+      &:hover {
+        background-color: rgba($couleur, 0.7);
+      }
+    }
+
+    &:nth-child(3) {
+      background-color: $couleur;
+      background-color: rgba($couleur, 0.9);
+
+      &:hover {
+        background-color: rgba($couleur, 0.75);
+      }
+    }
+
+    &:nth-child(4) {
+      background-color: $couleur;
+      background-color: rgba($couleur, 0.95);
+
+      &:hover {
+        background-color: rgba($couleur, 0.8);
+      }
+    }
+  }
 }
+
 .normes-ul-admission {
-	background-color: #222;
-	color: #fff;
-	font-family: 'Source Sans Pro', sans-serif;
-	*,
-	*::after,
-	*::before {
-		box-sizing: border-box;
-	}
-	&.admission-mince .admission-etapes a,
-	&.admission-mince .admission-question {
-		min-height: 95px;
-	}
-	.admission-entete {
-		padding: 20px 20px 20px 65px;
-		p {
-			font-size: 16px;
-		}
-		h2 {
-			font-size: 30px;
-			font-weight: 400;
-		    text-transform: uppercase;
-		}
-	}
-	.admission-contenu {
-		display: flex;
-	}
-	.admission-etapes {
-		display: flex;
-		flex: 11;
-		a {
-			align-items: center; //Nécessaire à IE11
-			color: #fff;
-			display: flex;
-			flex: 1;
-			min-height: 130px;
-			text-decoration: none;
-		}
-	}
-	.admission-numero {
-		border-right: 2px solid rgba(255, 255 , 255, 0.5);
-		font-size: 50px;
-		line-height: 42px;
-		margin: auto 10px auto 65px;
-		padding: 0 10px 0 0;
-	}
-	.admission-cta {
-		font-size: 18px;
-		margin: auto 10px auto 0;
-		max-width: 150px;
-	}
-	.admission-question {
-		align-items: center; //Nécessaire à IE11
-		background-color: #222 !important;
-		color: #fff;
-		display: flex;
-		flex: 1;
-		font-size: 18px;
-		padding: 10px;
-		min-height: 130px;
-		text-decoration: none;
-		&:hover {
-			background-color: #000 !important;
-		}
-		.contenu-question {
-			display: flex;
-			flex-direction: column;
-			margin: auto;
-			.texte-question {
-				margin-bottom: 10px;
-				text-align: center; //Pour centrer le texte dans IE11
-			}
-			.icon-question {
-				font-size: 36px;
-				margin: auto;
-				text-align: center; //Pour centrer le ? sur iPad
-			}
-		}
-	}
-	&.admission-ul { @include faculte(#af1004); }
-	&.faaad { @include faculte(#a91e22); }
-	&.fad { @include faculte(#efa943); }
-	&.fd { @include faculte(#d82520); }
-	&.fesp { @include faculte(#650e10); }
-	&.ffgg { @include faculte(#8dc63f); }
-	&.hei { @include faculte(#f58029); }
-	&.flsh { @include faculte(#29bdbc); }
-	&.fm { @include faculte(#f05323); }
-	&.fmd { @include faculte(#065199); }
-	&.fmus { @include faculte(#887e73); }
-	&.fpha { @include faculte(#089188); }
-	&.fp { @include faculte(#283f76); }
-	&.fsa { @include faculte(#717073); } 
-	&.fsaa { @include faculte(#00a176); }
-	&.fse { @include faculte(#f7a90b); }
-	&.fsg { @include faculte(#bd252b); }
-	&.fsi { @include faculte(#62419a); }
-	&.fss { @include faculte(#4079a2); }
-	&.ftsr { @include faculte(#4caecf); }
+  background-color: #222;
+  color: #fff;
+  font-family: 'Source Sans Pro', sans-serif;
+
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
+  }
+
+  &.admission-mince .admission-etapes a,
+  &.admission-mince .admission-question {
+    min-height: 95px;
+  }
+
+  .admission-entete {
+    padding: 20px 20px 20px 65px;
+
+    p {
+      font-size: 16px;
+    }
+
+    h2 {
+      font-size: 30px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
+
+  .admission-contenu {
+    display: flex;
+  }
+
+  .admission-etapes {
+    display: flex;
+    flex: 11;
+
+    a {
+      align-items: center; //Nécessaire à IE11
+      color: #fff;
+      display: flex;
+      flex: 1;
+      min-height: 130px;
+      text-decoration: none;
+    }
+  }
+
+  .admission-numero {
+    border-right: 2px solid rgba(255, 255, 255, 0.5);
+    font-size: 50px;
+    line-height: 42px;
+    margin: auto 10px auto 65px;
+    padding: 0 10px 0 0;
+  }
+
+  .admission-cta {
+    font-size: 18px;
+    margin: auto 10px auto 0;
+    max-width: 150px;
+  }
+
+  .admission-question {
+    align-items: center; //Nécessaire à IE11
+    background-color: #222 !important;
+    color: #fff;
+    display: flex;
+    flex: 1;
+    font-size: 18px;
+    min-height: 130px;
+    padding: 10px;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #000 !important;
+    }
+
+    .contenu-question {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+
+      .texte-question {
+        margin-bottom: 10px;
+        text-align: center; //Pour centrer le texte dans IE11
+      }
+
+      .icon-question {
+        font-size: 36px;
+        margin: auto;
+        text-align: center; //Pour centrer le ? sur iPad
+      }
+    }
+  }
+
+  &.admission-ul { @include faculte(#af1004); }
+  &.faaad { @include faculte(#a91e22); }
+  &.fad { @include faculte(#efa943); }
+  &.fd { @include faculte(#d82520); }
+  &.fesp { @include faculte(#650e10); }
+  &.ffgg { @include faculte(#8dc63f); }
+  &.hei { @include faculte(#f58029); }
+  &.flsh { @include faculte(#29bdbc); }
+  &.fm { @include faculte(#f05323); }
+  &.fmd { @include faculte(#065199); }
+  &.fmus { @include faculte(#887e73); }
+  &.fpha { @include faculte(#089188); }
+  &.fp { @include faculte(#283f76); }
+  &.fsa { @include faculte(#717073); }
+  &.fsaa { @include faculte(#00a176); }
+  &.fse { @include faculte(#f7a90b); }
+  &.fsg { @include faculte(#bd252b); }
+  &.fsi { @include faculte(#62419a); }
+  &.fss { @include faculte(#4079a2); }
+  &.ftsr { @include faculte(#4caecf); }
 }
 
 @media only screen and (max-width: 1200px) {
-	.normes-ul-admission {
-		.admission-entete {
-			padding-left: 40px;
-		}
-		.admission-numero {
-			margin-left: 40px;
-		}
-	}
+  .normes-ul-admission {
+    .admission-entete {
+      padding-left: 40px;
+    }
+
+    .admission-numero {
+      margin-left: 40px;
+    }
+  }
 }
 
 @media only screen and (max-width: 992px) {
-	.normes-ul-admission {
-		.admission-etapes {
-			flex: 10;
-			flex-wrap: wrap;
-			a {
-				flex: auto;
-				width: 50%;
-			}
-		}
-		.admission-question {
-			flex: 2;
-			.contenu-question {
-				margin-top: 30px;
-			}
-		}
-		&.admission-mince .admission-question .contenu-question {
-			margin-top: 10px;
-		}
-	}
+  .normes-ul-admission {
+    .admission-etapes {
+      flex: 10;
+      flex-wrap: wrap;
+
+      a {
+        flex: auto;
+        width: 50%;
+      }
+    }
+
+    .admission-question {
+      flex: 2;
+
+      .contenu-question {
+        margin-top: 30px;
+      }
+    }
+
+    &.admission-mince .admission-question .contenu-question {
+      margin-top: 10px;
+    }
+  }
 }
 
 @media only screen and (max-width: 767px) {
-	.normes-ul-admission {
-		.admission-contenu {
-			flex-direction: column; 
-		}
-		.admission-etapes {
-			flex: auto; //Nécessaire à IE11
-			a {
-				width: 100%;
-			}
-		}
-		.admission-question .contenu-question,
-		&.admission-mince .admission-question .contenu-question {
-			margin-top: auto;
-		}
-	}
+  .normes-ul-admission {
+    .admission-contenu {
+      flex-direction: column;
+    }
+
+    .admission-etapes {
+      flex: auto; //Nécessaire à IE11
+      a {
+        width: 100%;
+      }
+    }
+
+    .admission-question .contenu-question,
+    &.admission-mince .admission-question .contenu-question {
+      margin-top: auto;
+    }
+  }
 }

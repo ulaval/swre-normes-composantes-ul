@@ -37,7 +37,7 @@ thead tr:nth-child(1) {
   position: relative;
 }
 
-.scroll-left:before {
+.scroll-left::before {
   background: -webkit-radial-gradient(left ellipse, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 0 center;
   background: radial-gradient(ellipse at left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 0 center;
   background-attachment: scroll;
@@ -50,7 +50,7 @@ thead tr:nth-child(1) {
   width: $goutiere/2;
 }
 
-.scroll-right:after {
+.scroll-right::after {
   background: -webkit-radial-gradient(right ellipse, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 100% center;
   background: radial-gradient(ellipse at right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 100% center;
   background-attachment: scroll;
@@ -60,8 +60,8 @@ thead tr:nth-child(1) {
   display: block;
   height: 100%;
   position: absolute;
-  right:  0;
-  top:  0;
+  right: 0;
+  top: 0;
   width: $goutiere/2;
   z-index: 999;
 }
