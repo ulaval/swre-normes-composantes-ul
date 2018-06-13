@@ -16,5 +16,8 @@
     "stylelint-config-standard": "^18.2.0",
     "stylelint-order": "^0.8.1",
     "stylelint-scss": "^3.1.0"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.0"
   }
 }

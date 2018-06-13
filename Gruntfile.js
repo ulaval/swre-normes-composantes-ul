@@ -7,7 +7,22 @@ web@bsw.ulaval.ca
 module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt); // Utilise le module load-grunt-tasks pour charger automatiquement les tâches à partir du fichier package.json
   grunt.initConfig({
-
+    copy: {
+      build: { // Copie les dépendances du dossier node_modules (téléchargées grace au fichier package.json) vers le dossier de travail. JQuery est dans les normes (sous-module git).
+        files: [
+          {
+            expand: true,
+            flatten: true,
+            src: ['node_modules/normalize.css/normalize.css'],
+            dest: 'css/sass/common/',
+            filter: 'isFile',
+            rename: function(dest, src) {
+              return dest + '_normalize.scss';
+            }
+          },
+        ]
+      },
+    },
     /********************
     Linters
     Ils fontionnent tous différemment. Voir le wiki pour des détails.
@@ -56,6 +71,7 @@ module.exports = function (grunt) {
   })
   grunt.registerTask('build', [ // Construit un environnement de test local
     'ci',
+    'copy:build',
     'sass:main',
   ]);
   grunt.registerTask('serve', [ // Démarre les services nécessaires au développement
