@@ -1,6 +1,8 @@
 //Tableaux "mobiles": si le contenu dépasse la largeur du contenant, un ombrage est affiché sur les côtés pour montrer à l'utilisateur qu'il y a du contenu et qu'il peut défiler à l'horizontal. Voir le Javascript.
 table {
-  border: none;
+  border-bottom: 3px solid $ul-gris-moyen-01;
+  border-collapse: collapse;
+  border-spacing: 0;
   display: inline-block;
   margin: 0; //La marge du bas est sur table-wrapper
   max-width: 100%;
@@ -11,21 +13,30 @@ table[style*="width:100%"] {
   width: auto !important;
 }
 
-th,
-td {
-  border: none;
-  padding: 5px $goutiere;
-}
-
 th {
   background-color: $ul-gris-moyen-01;
-  border-bottom: 1px solid #585858;
-  font-size: 16px;
   font-weight: 700;
+  padding: 10px $goutiere/2 6px $goutiere/2; //le 4px de moins en bas est pour donner l'effet que c'est pareil avec la bordure de la première ligne
 }
 
-tr:nth-child(odd) {
-  background-color: $ul-gris-pale-02;
+td {
+  border-bottom: 1px solid $ul-gris-moyen-01;
+  border-right: 1px solid $ul-gris-moyen-01;
+  padding: 10px $goutiere/2;
+
+  &:last-of-type {
+    border-right: none;
+  }
+}
+
+tr {
+  &:first-child {
+    border-top: 4px solid $ul-gris-moyen-01;
+  }
+
+  &:nth-child(even) {
+    background-color: $ul-gris-pale-02;
+  }
 }
 
 thead tr:nth-child(1) {
