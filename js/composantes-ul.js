@@ -1,6 +1,6 @@
 /* global jQuery */
 jQuery(document).ready(function () {
-  /// ///////
+  // ----------
   // Accordéons
   jQuery('.accordeon-titre').click(function () {
     jQuery(this).next().slideToggle()
@@ -19,10 +19,11 @@ jQuery(document).ready(function () {
   if (window.location.hash) {
     jQuery('.accordeon' + window.location.hash).addClass('ouvert') // Au chargement, si l'URL demandé comporte un #, ouvre l'accordéon correspondant
   }
-  /// ///////
+  // Fin Accordéons
+  // ----------
 })
 
-/// ///////
+// ----------
 // Tableaux "mobiles": si le contenu dépasse la largeur du contenant, un ombrage est affiché sur les côtés pour montrer à l'utilisateur qu'il y a du contenu et qu'il peut défiler à l'horizontal. Voir le CSS.
 function gererOmbragesTableauMobile (tableau) {
   if (tableau.scrollLeft() === 0) {
@@ -84,4 +85,4 @@ jQuery(window).resize(function () {
   })
 })
 // Fin Tableaux mobiles
-/// ///////
+// ----------
