@@ -73,6 +73,7 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   max-width: 600px;
+  text-align: center;
 }
 
 h2 {
@@ -81,9 +82,7 @@ h2 {
 }
 
 h1,
-h2.centre {
-  text-align: center;
-
+h2.accent {
   &::after {
     background-color: $ul-rouge-ul;
     content: "";
@@ -92,6 +91,11 @@ h2.centre {
     margin: $marge-texte auto 0 auto;
     width: 40px;
   }
+}
+
+h2.accent::after {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .boite-texte h2 {
