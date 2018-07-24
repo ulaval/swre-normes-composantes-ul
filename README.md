@@ -1,4 +1,4 @@
-﻿Version 1.0.0
+﻿Version 1.0
 
 Ces fichiers (CSS, Javascript et images) sont nécessaires à l’implantation des composantes Web de l'Université Laval. Ce code est dépendant de celui des normes institutionnelles d'entête et de pied de page.
 
