@@ -1,6 +1,6 @@
 //Tableaux "mobiles": si le contenu dépasse la largeur du contenant, un ombrage est affiché sur les côtés pour montrer à l'utilisateur qu'il y a du contenu et qu'il peut défiler à l'horizontal. Voir le Javascript.
 table {
-  border-bottom: 3px solid $ul-gris-moyen-01;
+  border-bottom: 3px solid $ul-gris-moyen-02;
   border-collapse: collapse;
   border-spacing: 0;
   display: inline-block;
@@ -13,35 +13,53 @@ table[style*="width:100%"] {
   width: auto !important;
 }
 
-th {
-  background-color: $ul-gris-moyen-01;
-  font-weight: 700;
-  padding: 10px $goutiere/2 6px $goutiere/2; //le 4px de moins en bas est pour donner l'effet que c'est pareil avec la bordure de la première ligne
-  text-align: left;
+thead tr {
+  &:first-child {
+    background-color: $ul-gris-moyen-01;
+    border-top: 4px solid $ul-gris-moyen-02;
+  }
+
+  th {
+    padding: 6px $goutiere/2 10px $goutiere/2; //le 4px de moins en bas est pour donner l'effet que c'est pareil avec la bordure de la première ligne
+
+    &:last-of-type {
+      border-right: none;
+    }
+  }
 }
 
-td {
+th *:last-child,
+td *:last-child {
+  margin-bottom: 0;
+}
+
+th {
+  font-weight: 700;
+  text-align: left;
+
+  p {
+    font-weight: 700;
+  }
+}
+
+td,
+th {
   border-bottom: 1px solid $ul-gris-moyen-01;
   border-right: 1px solid $ul-gris-moyen-01;
   padding: 10px $goutiere/2;
+  vertical-align: top;
+}
 
+td {
   &:last-of-type {
     border-right: none;
   }
 }
 
 tr {
-  &:first-child {
-    border-top: 4px solid $ul-gris-moyen-01;
-  }
-
   &:nth-child(even) {
     background-color: $ul-gris-pale-02;
   }
-}
-
-thead tr:nth-child(1) {
-  background: none;
 }
 
 .table-wrapper { //Ajouté en JS

@@ -55,18 +55,18 @@
 
   &.admission-mince .admission-etapes a,
   &.admission-mince .admission-question {
-    min-height: 95px;
+    min-height: 9.5rem;
   }
 
   .admission-entete {
     padding: 20px 20px 20px 65px;
 
     p {
-      font-size: 16px;
+      font-size: 1.6rem;
     }
 
     h2 {
-      font-size: 30px;
+      font-size: 3rem;
       font-weight: 400;
       text-transform: uppercase;
     }
@@ -92,14 +92,14 @@
 
   .admission-numero {
     border-right: 2px solid rgba(255, 255, 255, 0.5);
-    font-size: 50px;
-    line-height: 42px;
+    font-size: 5rem;
+    line-height: 4.2rem;
     margin: auto 10px auto 65px;
     padding: 0 10px 0 0;
   }
 
   .admission-cta {
-    font-size: 18px;
+    font-size: 1.8rem;
     margin: auto 10px auto 0;
     max-width: 150px;
   }
@@ -110,7 +110,7 @@
     color: #fff;
     display: flex;
     flex: 1;
-    font-size: 18px;
+    font-size: 1.8rem;
     min-height: 130px;
     padding: 10px;
     text-decoration: none;
@@ -130,7 +130,7 @@
       }
 
       .icon-question {
-        font-size: 36px;
+        font-size: 3.6rem;
         margin: auto;
         text-align: center; //Pour centrer le ? sur iPad
       }
