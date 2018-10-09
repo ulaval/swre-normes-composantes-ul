@@ -28,7 +28,7 @@ module.exports = function (grunt) {
     Ils fontionnent tous différemment. Voir le wiki pour des détails.
     *********************/
     standard: { // Javascript (https://standardjs.com/)
-      src: ['scripts/**/*.js'] // On scan tout le dossier script et ses sous dossiers. Les configurations sont intégrés dans le module. Utiliser le CLI pour réparer les erreurs automatiquements.
+      src: ['js/**/*.js'] // On scan tout le dossier script et ses sous dossiers. Les configurations sont intégrés dans le module. Utiliser le CLI pour réparer les erreurs automatiquements.
     },
     stylelint: { // CSS et SASS (https://stylelint.io/)
       all: ['css/sass/**/*.scss'] // On scan tout le dossier sass et ses sous dossiers. Les configurations viennent des modules stylelint-config-standard et stylelint-order. Utiliser le CLI pour réparer les erreurs automatiquements.
@@ -64,7 +64,7 @@ module.exports = function (grunt) {
         tasks: ['stylelint', 'sass:main']
       },
       scripts: {
-        files: ['scripts/**/*.js'],
+        files: ['js/**/*.js'],
         tasks: ['standard']
       }
     }
