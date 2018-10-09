@@ -1,28 +1,4 @@
 /* global jQuery */
-jQuery(document).ready(function () {
-  // ----------
-  // Accordéons
-  jQuery('.accordeon-titre').click(function () {
-    jQuery(this).next().slideToggle()
-    jQuery(this).parent().toggleClass('ouvert')
-  })
-  jQuery('a').click(function () { // Si le lien cliqué comporte un #, ouvre l'accordéon correspondant
-    var lien = jQuery(this).attr('href')
-    if (typeof lien !== typeof undefined && lien !== false) {
-      var positionHashtag = lien.indexOf('#')
-      if (positionHashtag !== -1) {
-        var hashtag = lien.substring(positionHashtag, lien.length)
-        jQuery('.accordeon' + hashtag).addClass('ouvert')
-      }
-    }
-  })
-  if (window.location.hash) {
-    jQuery('.accordeon' + window.location.hash).addClass('ouvert') // Au chargement, si l'URL demandé comporte un #, ouvre l'accordéon correspondant
-  }
-  // Fin Accordéons
-  // ----------
-})
-
 // ----------
 // Tableaux "mobiles": si le contenu dépasse la largeur du contenant, un ombrage est affiché sur les côtés pour montrer à l'utilisateur qu'il y a du contenu et qu'il peut défiler à l'horizontal. Voir le CSS.
 function gererOmbragesTableauMobile (tableau) {
