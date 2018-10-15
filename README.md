@@ -1,4 +1,4 @@
-﻿Version 1.0
+﻿Version 1.1
 
 Ces fichiers (CSS, Javascript et images) sont nécessaires à l’implantation des composantes Web de l'Université Laval. Ce code est dépendant de celui des normes institutionnelles d'entête et de pied de page.
 
@@ -8,4 +8,10 @@ Il n’est pas recommandé de modifier les fichiers sources. Si des ajustements 
 
 Changement :
 
-1. Version 1, séparation de la Strate Admission des normes pour en faire la première composante
+1.
+  * Séparation de la Strate Admission des normes pour en faire la première composante
+
+1.1
+  * Ajout de font-size relatif aux paramètres
+  * Support des balises th dans un tbody
+  * Ajustement du comportement des bordures de cellules
