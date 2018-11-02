@@ -138,25 +138,25 @@
   }
 
   &.admission-ul { @include faculte(#af1004); }
-  &.faaad { @include faculte(#a91e22); }
-  &.fad { @include faculte(#efa943); }
-  &.fd { @include faculte(#d82520); }
-  &.fesp { @include faculte(#650e10); }
-  &.ffgg { @include faculte(#8dc63f); }
-  &.hei { @include faculte(#f58029); }
-  &.flsh { @include faculte(#29bdbc); }
-  &.fm { @include faculte(#f05323); }
-  &.fmd { @include faculte(#065199); }
-  &.fmus { @include faculte(#887e73); }
-  &.fpha { @include faculte(#089188); }
-  &.fp { @include faculte(#283f76); }
-  &.fsa { @include faculte(#717073); }
-  &.fsaa { @include faculte(#00a176); }
-  &.fse { @include faculte(#f7a90b); }
-  &.fsg { @include faculte(#bd252b); }
-  &.fsi { @include faculte(#62419a); }
-  &.fss { @include faculte(#4079a2); }
-  &.ftsr { @include faculte(#4caecf); }
+  &.faaad { @include faculte($ul-couleur-faaad); }
+  &.fad { @include faculte($ul-couleur-fad); }
+  &.fd { @include faculte($ul-couleur-fd); }
+  &.fesp { @include faculte($ul-couleur-fesp); }
+  &.ffgg { @include faculte($ul-couleur-ffgg); }
+  &.hei { @include faculte($ul-couleur-hei); }
+  &.flsh { @include faculte($ul-couleur-flsh); }
+  &.fm { @include faculte($ul-couleur-fm); }
+  &.fmd { @include faculte($ul-couleur-fmd); }
+  &.fmus { @include faculte($ul-couleur-fmus); }
+  &.fpha { @include faculte($ul-couleur-fpha); }
+  &.fp { @include faculte($ul-couleur-fp); }
+  &.fsa { @include faculte($ul-couleur-fsa); }
+  &.fsaa { @include faculte($ul-couleur-fsaa); }
+  &.fse { @include faculte($ul-couleur-fse); }
+  &.fsg { @include faculte($ul-couleur-fsg); }
+  &.fsi { @include faculte($ul-couleur-fsi); }
+  &.fss { @include faculte($ul-couleur-fss); }
+  &.ftsr { @include faculte($ul-couleur-ftsr); }
 }
 
 @media only screen and (max-width: 1200px) {
