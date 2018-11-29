@@ -35,8 +35,8 @@ function hasScroll (el, index, match) {
     if (sY === scroll) { return true }
   }
   // Compare client and scroll dimensions to see if a scrollbar is needed
-  return $el.innerHeight() < el.scrollHeight || // Make use of potential short circuit
-        $el.innerWidth() < el.scrollWidth // innerHeight is the one you want
+  return Math.ceil($el.innerHeight()) < el.scrollHeight || // Make use of potential short circuit
+        Math.ceil($el.innerWidth()) < el.scrollWidth // innerHeight is the one you want
 }
 jQuery.expr[':'].hasScroll = hasScroll
 jQuery(document).ready(function () {
