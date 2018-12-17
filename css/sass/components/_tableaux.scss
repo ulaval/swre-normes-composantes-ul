@@ -1,8 +1,9 @@
 //Tableaux "mobiles": si le contenu dépasse la largeur du contenant, un ombrage est affiché sur les côtés pour montrer à l'utilisateur qu'il y a du contenu et qu'il peut défiler à l'horizontal. Voir le Javascript.
 table {
-  border-bottom: 3px solid $ul-gris-moyen-02;
+  border-bottom: 4px solid $ul-gris-moyen-01;
   border-collapse: collapse;
   border-spacing: 0;
+  border-top: 4px solid $ul-gris-moyen-01;
   display: inline-block;
   margin: 0; //La marge du bas est sur table-wrapper
   max-width: 100%;
@@ -13,27 +14,17 @@ table[style*="width:100%"] {
   width: auto !important;
 }
 
-thead tr {
-  &:first-child {
-    background-color: $ul-gris-moyen-01;
-    border-top: 4px solid $ul-gris-moyen-02;
-  }
-
-  th {
-    padding: 6px $goutiere/2 10px $goutiere/2; //le 4px de moins en bas est pour donner l'effet que c'est pareil avec la bordure de la première ligne
-
-    &:last-of-type {
-      border-right: none;
-    }
-  }
+th,
+td {
+  border-bottom: 1px solid $ul-gris-pale-02;
+  border-right: 1px solid $ul-gris-pale-02;
+  padding: 10px $goutiere/2;
+  vertical-align: top;
 }
 
-th *:last-child,
-td *:last-child {
-  margin-bottom: 0;
-}
-
-th {
+th,
+thead td {
+  background-color: $ul-gris-moyen-01;
   font-weight: 700;
   text-align: left;
 
@@ -42,23 +33,27 @@ th {
   }
 }
 
-td,
-th {
-  border-bottom: 1px solid $ul-gris-moyen-01;
-  border-right: 1px solid $ul-gris-moyen-01;
-  padding: 10px $goutiere/2;
-  vertical-align: top;
+thead th,
+thead td,
+//entête de colonne d'un tableau sans thead
+tr:first-child th,
+tr:first-child td {
+  padding-top: 6px; //4px de moins pour donner l'effet que c'est pareil avec la bordure du tableau
 }
 
-td {
-  &:last-of-type {
-    border-right: none;
-  }
+th *:last-child,
+td *:last-child {
+  margin-bottom: 0;
+}
+
+th:last-of-type,
+td:last-of-type {
+  border-right: none;
 }
 
 tr {
   &:nth-child(even) {
-    background-color: $ul-gris-pale-02;
+    background-color: $ul-gris-pale-01;
   }
 }
 
