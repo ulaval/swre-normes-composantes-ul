@@ -1,9 +1,9 @@
 //Tableaux "mobiles": si le contenu dépasse la largeur du contenant, un ombrage est affiché sur les côtés pour montrer à l'utilisateur qu'il y a du contenu et qu'il peut défiler à l'horizontal. Voir le Javascript.
 table {
-  border-bottom: 4px solid $ul-gris-moyen-01;
+  border-bottom: 4px solid $ul-gris-moyen-02;
   border-collapse: collapse;
   border-spacing: 0;
-  border-top: 4px solid $ul-gris-moyen-01;
+  border-top: 4px solid $ul-gris-moyen-02;
   display: inline-block;
   margin: 0; //La marge du bas est sur table-wrapper
   max-width: 100%;
