@@ -1,17 +1,12 @@
-//Tableaux "mobiles": si le contenu dépasse la largeur du contenant, un ombrage est affiché sur les côtés pour montrer à l'utilisateur qu'il y a du contenu et qu'il peut défiler à l'horizontal. Voir le Javascript.
 table {
+  background-color: #fff;
   border-bottom: 4px solid $ul-gris-moyen-02;
   border-collapse: collapse;
   border-spacing: 0;
   border-top: 4px solid $ul-gris-moyen-02;
-  display: inline-block;
-  margin: 0; //La marge du bas est sur table-wrapper
+  margin: 0 0 $goutiere 0;
   max-width: 100%;
   overflow-x: auto;
-}
-
-table[style*="width:100%"] {
-  width: auto !important;
 }
 
 th,
@@ -51,44 +46,8 @@ td:last-of-type {
   border-right: none;
 }
 
-tr {
-  &:nth-child(even) {
-    background-color: $ul-gris-pale-01;
-  }
-}
-
-.table-wrapper { //Ajouté en JS
-  margin: 0 0 $goutiere 0;
-  position: relative;
-}
-
-.scroll-left::before {
-  background: -webkit-radial-gradient(left ellipse, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 0 center;
-  background: radial-gradient(ellipse at left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 0 center;
-  background-attachment: scroll;
-  background-repeat: no-repeat;
-  background-size: $goutiere/2 100%;
-  content: "";
-  display: block;
-  height: 100%;
-  position: absolute;
-  width: $goutiere/2;
-}
-
-.scroll-right::after {
-  background: -webkit-radial-gradient(right ellipse, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 100% center;
-  background: radial-gradient(ellipse at right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 100% center;
-  background-attachment: scroll;
-  background-repeat: no-repeat;
-  background-size: $goutiere/2 100%;
-  content: "";
-  display: block;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: $goutiere/2;
-  z-index: 999;
+tr:nth-child(even) {
+  background-color: $ul-gris-pale-01;
 }
 
 tbody {
