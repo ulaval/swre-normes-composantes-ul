@@ -2,33 +2,35 @@
   $hauteur-ligne: 115px;
   //$couleur-fonce: rgba(0, 0, 0, 0.1);
   $couleur-fonce: #960c00;
-  background-image: linear-gradient( //9 blocs de haut
-      2deg,
-      transparent 0,
-      transparent $hauteur-ligne,
-      $couleur $hauteur-ligne,
-      $couleur $hauteur-ligne*2,
-      $couleur-fonce $hauteur-ligne*2,
-      $couleur-fonce $hauteur-ligne*3,
-      $couleur $hauteur-ligne*3,
-      $couleur $hauteur-ligne*4,
-      $couleur-fonce $hauteur-ligne*4,
-      $couleur-fonce $hauteur-ligne*5,
-      $couleur $hauteur-ligne*5,
-      $couleur $hauteur-ligne*6,
-      $couleur-fonce $hauteur-ligne*6,
-      $couleur-fonce $hauteur-ligne*7,
-      $couleur $hauteur-ligne*7,
-      $couleur $hauteur-ligne*8,
-      $couleur-fonce $hauteur-ligne*8,
-      $couleur-fonce $hauteur-ligne*9,
-      $couleur $hauteur-ligne*9,
-      $couleur $hauteur-ligne*10,
-      transparent $hauteur-ligne*10,
-      transparent $hauteur-ligne*11
-    );
-    background-position: left -115px;
-    //background-size: 100% 1265px; // 115*11=1265
+
+  background-image:
+    linear-gradient( //9 blocs de haut
+    2deg,
+    transparent 0,
+    transparent $hauteur-ligne,
+    $couleur $hauteur-ligne,
+    $couleur $hauteur-ligne*2,
+    $couleur-fonce $hauteur-ligne*2,
+    $couleur-fonce $hauteur-ligne*3,
+    $couleur $hauteur-ligne*3,
+    $couleur $hauteur-ligne*4,
+    $couleur-fonce $hauteur-ligne*4,
+    $couleur-fonce $hauteur-ligne*5,
+    $couleur $hauteur-ligne*5,
+    $couleur $hauteur-ligne*6,
+    $couleur-fonce $hauteur-ligne*6,
+    $couleur-fonce $hauteur-ligne*7,
+    $couleur $hauteur-ligne*7,
+    $couleur $hauteur-ligne*8,
+    $couleur-fonce $hauteur-ligne*8,
+    $couleur-fonce $hauteur-ligne*9,
+    $couleur $hauteur-ligne*9,
+    $couleur $hauteur-ligne*10,
+    transparent $hauteur-ligne*10,
+    transparent $hauteur-ligne*11
+  );
+  background-position: left -115px;
+  //background-size: 100% 1265px; // 115*11=1265
 }
 
 .normes-ul-etude {
