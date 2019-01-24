@@ -24,38 +24,6 @@ a:hover {
   text-decoration: underline;
 }
 
-main {
-  a[href$='.pdf'],
-  a[href$='.doc'],
-  a[href$='.docx'],
-  a[href$='.ppt'],
-  a[href$='.pptx'],
-  a[href$='.xls'],
-  a[href$='.xlsx'] {
-    background: no-repeat right center;
-    padding: 0 $marge-texte 0 0;
-  }
-
-  a[href$='.pdf'] {
-    background-image: url(../img/icons-fichiers/pdf.png);
-  }
-
-  a[href$='.doc'],
-  a[href$='.docx'] {
-    background-image: url(../img/icons-fichiers/doc.png);
-  }
-
-  a[href$='.ppt'],
-  a[href$='.pptx'] {
-    background-image: url(../img/icons-fichiers/ppt.png);
-  }
-
-  a[href$='.xls'],
-  a[href$='.xlsx'] {
-    background-image: url(../img/icons-fichiers/xls.png);
-  }
-}
-
 :focus {
   outline: none !important; // Évite l'ajout d'un halo bleu autour du lien dans Safari
 }
@@ -139,13 +107,13 @@ p {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 2.2rem;
-  margin: 0 0 35px 0;
+  margin: 0 0 25px 0;
 }
 
 ul,
 ol {
   font-size: 1.6rem;
-  margin: 0 0 35px 0;
+  margin: 0 0 25px 0;
   padding: 0 0 0 $marge-texte;
 
   ul,
