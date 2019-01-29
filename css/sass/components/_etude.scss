@@ -2,14 +2,123 @@
   background-color: $ul-rouge-ul;
   background-image: url("../img/oblique.svg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   margin: $goutiere*2 0;
-  padding: $goutiere*2 0;
+  padding: $goutiere*3 $goutiere/2;
 
   *,
   *::after,
   *::before {
     box-sizing: border-box;
+  }
+
+  img {
+    display: block;
+    filter: opacity(85%);
+    height: auto;
+    width: 100%;
+  }
+
+  .ul-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .etude-img {
+    width: 100%;
+  }
+
+  .ul-bouton {
+    display: flex;
+    margin-bottom: $goutiere/2;
+    text-align: center;
+
+    a {
+      border: 1px solid $ul-gris-fonce-01;
+      color: #000;
+      font-weight: 700;
+      padding: 13px 17px;
+
+      &:hover {
+        background: $ul-gris-pale-02;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .etude-general {
+    background: #fff;
+    padding: 80px $goutiere $goutiere/2 $goutiere;
+
+    h2 {
+      font-size: 4rem;
+      line-height: 4rem;
+      margin-bottom: 80px;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 2rem;
+      margin-bottom: 80px;
+    }
+
+    .ul-bouton:last-child {
+      margin-bottom: $goutiere/2;
+    }
+  }
+
+  .etude-offres {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 35px;
+    text-align: center;
+
+    h3 {
+      margin-bottom: $goutiere;
+    }
+
+    .bouton-fleche {
+      border: 1px solid $ul-rouge-ul;
+      display: flex;
+      height: 50px;
+      margin: 0 auto;
+      width: 50px;
+
+      &:hover {
+        border-color: #fff;
+
+        svg {
+          rect,
+          polygon {
+            fill: #fff;
+          }
+        }
+      }
+
+      svg {
+        height: 15px;
+        margin: auto;
+        width: 23px;
+
+        rect,
+        polygon {
+          fill: $ul-rouge-ul;
+        }
+      }
+    }
+  }
+
+  .etude-offre {
+    border-right: 1px solid $ul-gris-fonce-01;
+    padding: 0 $goutiere;
+    margin: $goutiere 0;
+    width: 100%;
+
+    &:nth-of-type(3n) {
+      border-right: none;
+    }
   }
 
   &.faaad { background-color: $ul-couleur-faaad; }
@@ -36,8 +145,33 @@
   &.ro { background-color: $ul-couleur-ro; }
 }
 
+@media (min-width: $md) {
+  .normes-ul-etude {
+    .etude-img {
+      width: 50%;
+    }
+
+    .etude-general {
+      width: 50%;
+
+      p:last-child {
+        margin-bottom: 10px;
+      }
+    }
+
+    .etude-offre {
+      width: 33.3333%;
+    }
+  }
+}
+
 @media (min-width: $lg) {
   .normes-ul-etude {
     min-height: 1090px;
+
+    .ul-bouton a {
+      padding-left: 45px;
+      padding-right: 45px;
+    }
   }
 }
