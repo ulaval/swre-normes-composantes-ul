@@ -1,6 +1,10 @@
 @mixin faculte($couleur) {
   background-color: $couleur;
 
+  .etude-img {
+    background-color: $couleur;
+  }
+
   .etude-offres {
     .bouton-fleche {
       border-color: $couleur;
@@ -28,8 +32,12 @@
     box-sizing: border-box;
   }
 
-  &.ul-etude-vide .etude-general {
-    border-bottom: 35px solid #000;
+  &.ul-etude-bas-vide {
+    background-image: url("../img/oblique-bas-vide.svg");
+
+    .etude-general {
+      border-bottom: 35px solid #000;
+    }
   }
 
   img {
@@ -45,6 +53,7 @@
   }
 
   .etude-img {
+    overflow: hidden;
     width: 100%;
   }
 
@@ -68,11 +77,11 @@
 
   .etude-general {
     background: #fff;
-    padding: 80px $goutiere $goutiere/2 $goutiere;
+    padding: 80px $goutiere/2 $goutiere/2 $goutiere/2;
 
     h2 {
-      font-size: 4rem;
-      line-height: 4rem;
+      font-size: 3.6rem;
+      line-height: 3.6rem;
       margin-bottom: 45px;
       text-transform: uppercase;
     }
@@ -161,10 +170,33 @@
   &.ro { @include faculte($ul-couleur-ro); }
 }
 
+@media (min-width: $sm) {
+  .normes-ul-etude {
+
+    .etude-general {
+      padding-left: $goutiere;
+      padding-right: $goutiere;
+
+      h2 {
+        font-size: 4rem;
+        line-height: 4rem;
+      }
+    }
+  }
+}
+
 @media (min-width: $md) {
   .normes-ul-etude {
 
-    &.ul-etude-vide .etude-img {
+    img {
+      height: 100%;
+      left: 50%;
+      position: relative;
+      transform: translate(-50%, 0);
+      width: auto;
+    }
+
+    &.ul-etude-bas-vide .etude-img {
       border-bottom: 35px solid #000;
     }
 
