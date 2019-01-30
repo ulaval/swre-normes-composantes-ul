@@ -1,5 +1,21 @@
+@mixin faculte($couleur) {
+  background-color: $couleur;
+
+  .etude-offres {
+    .bouton-fleche {
+      border-color: $couleur;
+      }
+
+    svg {
+      rect,
+      polygon {
+        fill: $couleur;
+      }
+    }
+  }
+}
+
 .normes-ul-etude {
-  background-color: $ul-rouge-ul;
   background-image: url("../img/oblique.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -10,6 +26,10 @@
   *::after,
   *::before {
     box-sizing: border-box;
+  }
+
+  &.ul-etude-vide .etude-general {
+    border-bottom: 35px solid #000;
   }
 
   img {
@@ -53,13 +73,13 @@
     h2 {
       font-size: 4rem;
       line-height: 4rem;
-      margin-bottom: 80px;
+      margin-bottom: 45px;
       text-transform: uppercase;
     }
 
     p {
       font-size: 2rem;
-      margin-bottom: 80px;
+      margin-bottom: 45px;
     }
 
     .ul-bouton:last-child {
@@ -79,74 +99,75 @@
       margin-bottom: $goutiere;
     }
 
-    .bouton-fleche {
-      border: 1px solid $ul-rouge-ul;
-      display: flex;
-      height: 50px;
-      margin: 0 auto;
-      width: 50px;
+    .etude-offre {
+      border-right: 1px solid $ul-gris-fonce-01;
+      padding: 0 $goutiere;
+      margin: 45px 0;
+      width: 100%;
 
-      &:hover {
-        border-color: #fff;
+      &:nth-of-type(3n) {
+        border-right: none;
+      }
 
-        svg {
-          rect,
-          polygon {
-            fill: #fff;
+      .bouton-fleche {
+        border: 1px solid;
+        display: flex;
+        height: 50px;
+        margin: 0 auto;
+        width: 50px;
+
+        &:hover {
+          border-color: #fff;
+
+          svg {
+            rect,
+            polygon {
+              fill: #fff;
+            }
           }
         }
-      }
 
-      svg {
-        height: 15px;
-        margin: auto;
-        width: 23px;
-
-        rect,
-        polygon {
-          fill: $ul-rouge-ul;
+        svg {
+          height: 15px;
+          margin: auto;
+          width: 23px;
         }
       }
     }
   }
 
-  .etude-offre {
-    border-right: 1px solid $ul-gris-fonce-01;
-    padding: 0 $goutiere;
-    margin: $goutiere 0;
-    width: 100%;
-
-    &:nth-of-type(3n) {
-      border-right: none;
-    }
-  }
-
-  &.faaad { background-color: $ul-couleur-faaad; }
-  &.fad { background-color: $ul-couleur-fad; }
-  &.fd { background-color: $ul-couleur-fd; }
-  &.fesp { background-color: $ul-couleur-fesp; }
-  &.ffgg { background-color: $ul-couleur-ffgg; }
-  &.hei { background-color: $ul-couleur-hei; }
-  &.flsh { background-color: $ul-couleur-flsh; }
-  &.fm { background-color: $ul-couleur-fm; }
-  &.fmd { background-color: $ul-couleur-fmd; }
-  &.fmus { background-color: $ul-couleur-fmus; }
-  &.fpha { background-color: $ul-couleur-fpha; }
-  &.fp { background-color: $ul-couleur-fp; }
-  &.fsa { background-color: $ul-couleur-alt-fsa; } //À noter: on utilise ici une couleur alternative
-  &.fsaa { background-color: $ul-couleur-fsaa; }
-  &.fse { background-color: $ul-couleur-fse; }
-  &.fsg { background-color: $ul-couleur-fsg; }
-  &.fsi { background-color: $ul-couleur-fsi; }
-  &.fss { background-color: $ul-couleur-fss; }
-  &.ftsr { background-color: $ul-couleur-ftsr; }
-  &.bibliotheque { background-color: $ul-couleur-bibliotheque; }
-  &.peps { background-color: $ul-couleur-peps; }
-  &.ro { background-color: $ul-couleur-ro; }
+  &.etude-ul { @include faculte(#af1004); }
+  &.faaad { @include faculte($ul-couleur-faaad); }
+  &.fad { @include faculte($ul-couleur-fad); }
+  &.fd { @include faculte($ul-couleur-fd); }
+  &.fesp { @include faculte($ul-couleur-fesp); }
+  &.ffgg { @include faculte($ul-couleur-ffgg); }
+  &.hei { @include faculte($ul-couleur-hei); }
+  &.flsh { @include faculte($ul-couleur-flsh); }
+  &.fm { @include faculte($ul-couleur-fm); }
+  &.fmd { @include faculte($ul-couleur-fmd); }
+  &.fmus { @include faculte($ul-couleur-fmus); }
+  &.fpha { @include faculte($ul-couleur-fpha); }
+  &.fp { @include faculte($ul-couleur-fp); }
+  &.fsa { @include faculte($ul-couleur-alt-fsa); } //À noter: on utilise ici une couleur alternative
+  &.fsaa { @include faculte($ul-couleur-fsaa); }
+  &.fse { @include faculte($ul-couleur-fse); }
+  &.fsg { @include faculte($ul-couleur-fsg); }
+  &.fsi { @include faculte($ul-couleur-fsi); }
+  &.fss { @include faculte($ul-couleur-fss); }
+  &.ftsr { @include faculte($ul-couleur-ftsr); }
+  &.bibliotheque { @include faculte($ul-couleur-bibliotheque); }
+  &.peps { @include faculte($ul-couleur-peps); }
+  &.ro { @include faculte($ul-couleur-ro); }
 }
 
 @media (min-width: $md) {
   .normes-ul-etude {
+
+    &.ul-etude-vide .etude-img {
+      border-bottom: 35px solid #000;
+    }
+
     .etude-img {
       width: 50%;
     }
@@ -159,7 +180,7 @@
       }
     }
 
-    .etude-offre {
+    .etude-offres .etude-offre {
       width: 33.3333%;
     }
   }
