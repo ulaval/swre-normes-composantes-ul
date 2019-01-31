@@ -8,7 +8,7 @@
   .etude-offres {
     .bouton-fleche {
       border-color: $couleur;
-      }
+    }
 
     svg {
       rect,
@@ -104,25 +104,23 @@
     min-height: 35px;
     text-align: center;
 
-    h3 {
+    h3,
+    p {
       margin-bottom: $goutiere;
     }
 
     .etude-offre {
-      border-right: 1px solid $ul-gris-fonce-01;
-      padding: 0 $goutiere;
+      display: flex;
+      flex-direction: column;
       margin: 45px 0;
+      padding: 0 $goutiere;
       width: 100%;
-
-      &:nth-of-type(3n) {
-        border-right: none;
-      }
 
       .bouton-fleche {
         border: 1px solid;
         display: flex;
         height: 50px;
-        margin: 0 auto;
+        margin: auto auto 0 auto;
         width: 50px;
 
         &:hover {
@@ -172,7 +170,6 @@
 
 @media (min-width: $sm) {
   .normes-ul-etude {
-
     .etude-general {
       padding-left: $goutiere;
       padding-right: $goutiere;
@@ -187,7 +184,6 @@
 
 @media (min-width: $md) {
   .normes-ul-etude {
-
     img {
       height: 100%;
       left: 50%;
@@ -212,8 +208,25 @@
       }
     }
 
+    &.ul-offres-paires .etude-offres .etude-offre {
+      width: 50%;
+
+      &:nth-of-type(2n) {
+        border-right: none;
+      }
+
+      &:nth-of-type(3n) {
+        border-right: 1px solid $ul-gris-fonce-01;
+      }
+    }
+
     .etude-offres .etude-offre {
+      border-right: 1px solid $ul-gris-fonce-01;
       width: 33.3333%;
+
+      &:nth-of-type(3n) {
+        border-right: none;
+      }
     }
   }
 }
