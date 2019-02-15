@@ -34,7 +34,7 @@
 
   &.ul-etude-bas-vide {
     background-image: url("../img/oblique-bas-vide.svg");
-    //background-size: 100% 100%;
+    background-size: 100% 100.05%; //la hauteur est à 100.05% parce que sinon il reste toujours 1px non couvert dans le bas ce qui donne un filet de la couleur pleine
 
     .etude-general {
       border-bottom: 35px solid #000;
@@ -238,7 +238,6 @@
     min-height: 1090px;
 
     &.ul-etude-bas-vide {
-      //min-height: 900px;
       min-height: 0;
     }
 
