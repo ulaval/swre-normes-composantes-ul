@@ -22,7 +22,7 @@
 .normes-ul-etude {
   background-image: url("../img/oblique.svg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100.05%; //la hauteur est à 100.05% parce que sinon il reste toujours 1px non couvert dans le bas ce qui donne un filet de la couleur pleine
   margin: $goutiere*2 0;
   padding: $goutiere*3 $goutiere/2;
 
@@ -34,7 +34,6 @@
 
   &.ul-etude-bas-vide {
     background-image: url("../img/oblique-bas-vide.svg");
-    background-size: 100% 100.05%; //la hauteur est à 100.05% parce que sinon il reste toujours 1px non couvert dans le bas ce qui donne un filet de la couleur pleine
 
     .etude-general {
       border-bottom: 35px solid #000;
@@ -51,6 +50,7 @@
   .ul-container {
     display: flex;
     flex-wrap: wrap;
+    margin: auto;
   }
 
   .etude-img {
@@ -186,6 +186,8 @@
 
 @media (min-width: $md) {
   .normes-ul-etude {
+    background-size: cover;
+
     img {
       height: 100%;
       left: 50%;
