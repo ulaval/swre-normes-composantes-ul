@@ -34,6 +34,7 @@
 
   &.ul-etude-bas-vide {
     background-image: url("../img/oblique-bas-vide.svg");
+    //background-size: 100% 100%;
 
     .etude-general {
       border-bottom: 35px solid #000;
@@ -143,7 +144,7 @@
     }
   }
 
-  &.etude-ul { @include faculte(#af1004); }
+  &.dgfc { @include faculte($ul-couleur-dgfc); }
   &.faaad { @include faculte($ul-couleur-faaad); }
   &.fad { @include faculte($ul-couleur-fad); }
   &.fd { @include faculte($ul-couleur-fd); }
@@ -165,6 +166,7 @@
   &.ftsr { @include faculte($ul-couleur-ftsr); }
   &.bibliotheque { @include faculte($ul-couleur-bibliotheque); }
   &.peps { @include faculte($ul-couleur-peps); }
+  &.residences { @include faculte($ul-couleur-residences); }
   &.ro { @include faculte($ul-couleur-ro); }
 }
 
@@ -234,6 +236,11 @@
 @media (min-width: $lg) {
   .normes-ul-etude {
     min-height: 1090px;
+
+    &.ul-etude-bas-vide {
+      //min-height: 900px;
+      min-height: 0;
+    }
 
     .ul-bouton a {
       padding-left: 45px;
