@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1955 884" style="enable-background:new 0 0 1955 884;" xml:space="preserve">
+	 viewBox="0 0 1920 873" width="1920" height="873" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:none;}
 	.st1{opacity:0.1;}
 	.st2{fill:#FFFFFF;}
 </style>
 <g>
-	<rect x="0" y="0" class="st0" width="1955" height="910"/>
-	<polygon class="st1" points="1956,182 0,115 0,0 1956,68 	"/>
-	<polygon class="st2" points="1956,68 -1,-1 -1,-1 1956,-1 	"/>
-	<polygon class="st1" points="1956,643 0,576 0,461 1956,528 	"/>
-	<polygon class="st1" points="1956,873 0,806 0,691 1956,758 	"/>
-	<polygon class="st2" points="1956,911 -1,911 -1,806 1956,873 	"/>
-	<polygon class="st1" points="1956,413 0,346 0,231 1956,298 	"/>
+	<polygon class="st1" points="1920,183 0,115 0,0 1920,68 	"/>
+	<polygon class="st2" points="1920,68 0,0 0,0 1920,0 	"/>
+	<polygon class="st1" points="1920,643 0,575 0,460 1920,528 	"/>
+	<polygon class="st1" points="1920,873 0,805 0,690 1920,758 	"/>
+	<polygon class="st2" points="1920,873 0,873 0,806 1920,873 	"/>
+	<polygon class="st1" points="1920,413 0,345 0,230 1920,298 	"/>
 </g>
 </svg>
