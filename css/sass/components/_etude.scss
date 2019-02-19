@@ -196,8 +196,12 @@
       width: auto;
     }
 
-    &.ul-etude-bas-vide .etude-img {
-      border-bottom: 35px solid #000;
+    &.ul-etude-bas-vide {
+      background-size: 100% 100.05%;
+
+      .etude-img {
+        border-bottom: 35px solid #000;
+      }
     }
 
     .etude-img {
