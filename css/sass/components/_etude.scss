@@ -1,0 +1,255 @@
+@mixin faculte($couleur) {
+  background-color: $couleur;
+
+  .etude-img {
+    background-color: $couleur;
+  }
+
+  .etude-offres {
+    .bouton-fleche {
+      border-color: $couleur;
+    }
+
+    svg {
+      rect,
+      polygon {
+        fill: $couleur;
+      }
+    }
+  }
+}
+
+.normes-ul-etude {
+  background-image: url("../img/oblique.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100.05%; //la hauteur est à 100.05% parce que sinon il reste toujours 1px non couvert dans le bas ce qui donne un filet de la couleur pleine
+  margin: $goutiere*2 0;
+  padding: $goutiere*3 $goutiere/2;
+
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
+  }
+
+  &.ul-etude-bas-vide {
+    background-image: url("../img/oblique-bas-vide.svg");
+
+    .etude-general {
+      border-bottom: 35px solid #000;
+    }
+  }
+
+  img {
+    display: block;
+    filter: opacity(85%);
+    height: auto;
+    width: 100%;
+  }
+
+  .ul-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+
+  .etude-img {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .ul-bouton {
+    display: flex;
+    margin-bottom: $goutiere/2;
+    text-align: center;
+
+    a {
+      border: 1px solid $ul-gris-fonce-01;
+      color: #000;
+      font-weight: 700;
+      padding: 13px 17px;
+
+      &:hover {
+        background: $ul-gris-pale-02;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .etude-general {
+    background: #fff;
+    padding: 80px $goutiere/2 $goutiere/2 $goutiere/2;
+
+    h2 {
+      font-size: 3.6rem;
+      line-height: 3.6rem;
+      margin-bottom: 45px;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 2rem;
+      margin-bottom: 45px;
+    }
+
+    .ul-bouton:last-child {
+      margin-bottom: $goutiere/2;
+    }
+  }
+
+  .etude-offres {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 35px;
+    text-align: center;
+
+    h3,
+    p {
+      margin-bottom: $goutiere;
+    }
+
+    .etude-offre {
+      display: flex;
+      flex-direction: column;
+      margin: 45px 0;
+      padding: 0 $goutiere;
+      width: 100%;
+
+      .bouton-fleche {
+        border: 1px solid;
+        display: flex;
+        height: 50px;
+        margin: auto auto 0 auto;
+        width: 50px;
+
+        &:hover {
+          border-color: #fff;
+
+          svg {
+            rect,
+            polygon {
+              fill: #fff;
+            }
+          }
+        }
+
+        svg {
+          height: 15px;
+          margin: auto;
+          width: 23px;
+        }
+      }
+    }
+  }
+
+  &.dgfc { @include faculte($ul-couleur-dgfc); }
+  &.faaad { @include faculte($ul-couleur-faaad); }
+  &.fad { @include faculte($ul-couleur-fad); }
+  &.fd { @include faculte($ul-couleur-fd); }
+  &.fesp { @include faculte($ul-couleur-fesp); }
+  &.ffgg { @include faculte($ul-couleur-ffgg); }
+  &.hei { @include faculte($ul-couleur-hei); }
+  &.flsh { @include faculte($ul-couleur-flsh); }
+  &.fm { @include faculte($ul-couleur-fm); }
+  &.fmd { @include faculte($ul-couleur-fmd); }
+  &.fmus { @include faculte($ul-couleur-fmus); }
+  &.fpha { @include faculte($ul-couleur-fpha); }
+  &.fp { @include faculte($ul-couleur-fp); }
+  &.fsa { @include faculte($ul-couleur-alt-fsa); } //À noter: on utilise ici une couleur alternative
+  &.fsaa { @include faculte($ul-couleur-fsaa); }
+  &.fse { @include faculte($ul-couleur-fse); }
+  &.fsg { @include faculte($ul-couleur-fsg); }
+  &.fsi { @include faculte($ul-couleur-fsi); }
+  &.fss { @include faculte($ul-couleur-fss); }
+  &.ftsr { @include faculte($ul-couleur-ftsr); }
+  &.bibliotheque { @include faculte($ul-couleur-bibliotheque); }
+  &.peps { @include faculte($ul-couleur-peps); }
+  &.residences { @include faculte($ul-couleur-residences); }
+  &.ro { @include faculte($ul-couleur-ro); }
+}
+
+@media (min-width: $sm) {
+  .normes-ul-etude {
+    .etude-general {
+      padding-left: $goutiere;
+      padding-right: $goutiere;
+
+      h2 {
+        font-size: 4rem;
+        line-height: 4rem;
+      }
+    }
+  }
+}
+
+@media (min-width: $md) {
+  .normes-ul-etude {
+    background-size: cover;
+
+    img {
+      height: 100%;
+      left: 50%;
+      position: relative;
+      transform: translate(-50%, 0);
+      width: auto;
+    }
+
+    &.ul-etude-bas-vide {
+      background-size: 100% 100.05%;
+
+      .etude-img {
+        border-bottom: 35px solid #000;
+      }
+    }
+
+    .etude-img {
+      width: 50%;
+    }
+
+    .etude-general {
+      width: 50%;
+
+      p:last-child {
+        margin-bottom: 10px;
+      }
+    }
+
+    &.ul-offres-paires .etude-offres .etude-offre {
+      width: 50%;
+
+      &:nth-of-type(2n) {
+        border-right: none;
+      }
+
+      &:nth-of-type(3n) {
+        border-right: 1px solid $ul-gris-fonce-01;
+      }
+    }
+
+    .etude-offres .etude-offre {
+      border-right: 1px solid $ul-gris-fonce-01;
+      width: 33.3333%;
+
+      &:nth-of-type(3n) {
+        border-right: none;
+      }
+    }
+  }
+}
+
+@media (min-width: $lg) {
+  .normes-ul-etude {
+    min-height: 1090px;
+
+    &.ul-etude-bas-vide {
+      min-height: 0;
+    }
+
+    .ul-bouton a {
+      padding-left: 45px;
+      padding-right: 45px;
+    }
+  }
+}

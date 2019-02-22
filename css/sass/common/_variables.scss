@@ -1,5 +1,5 @@
-$largeur-maximum-site : 1200px;
-$mapping-fonts : "fonts/";
+$largeur-maximum-site: 1200px;
+$mapping-fonts: "fonts/";
 $goutiere: 30px; //Marges entre les bloc de contenu, aussi utilisé comme "unité" ailleurs
 $marge-texte: 20px; //Généralement la marge du bas
 
@@ -28,7 +28,7 @@ $xl: 1200px;
 // Extra large devices (large desktops, 1200px and up)
 //@media (min-width: $xl) { ... }
 
-/* Couleurs */
+// Couleurs
 $ul-rouge-ul: #e30513;
 $ul-jaune-ul: #ffc103;
 $ul-bleu-ul: #09f;
@@ -40,6 +40,7 @@ $ul-gris-moyen-02: #999;
 $ul-gris-fonce-01: #666;
 $ul-gris-fonce-02: #232323;
 
+// Couleurs de facultés
 $ul-couleur-faaad: #a91e22;
 $ul-couleur-fad: #efa943;
 $ul-couleur-fd: #d82520;
@@ -59,3 +60,13 @@ $ul-couleur-fsg: #bd252b;
 $ul-couleur-fsi: #62419a;
 $ul-couleur-fss: #4079a2;
 $ul-couleur-ftsr: #4caecf;
+
+// Couleurs d'unités
+$ul-couleur-bibliotheque: #f78021;
+$ul-couleur-dgfc: #d2e9e6;
+$ul-couleur-peps: #aa0900;
+$ul-couleur-residences: #293842;
+$ul-couleur-ro: #f11212;
+
+// Couleurs alternatives
+$ul-couleur-alt-fsa: #e4e8e9;
