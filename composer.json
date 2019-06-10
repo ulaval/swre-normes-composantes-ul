@@ -1,9 +1,9 @@
 {
-"name": "ulaval/composantes_bsw",
+"name": "ulaval/composantes_ul",
 "type": "ulaval-templates-assets",
-"description": "Composantes BSW",
+"description": "Composantes UL",
 "license": "GPL-2.0+",
-"homepage": "https://bitbucket.org/ulavalbsw/composantes-bsw/",
+"homepage": "https://bitbucket.org/ulavalbsw/composantes-ul/",
 "minimum-stability": "dev",
 "require": { }
 }
