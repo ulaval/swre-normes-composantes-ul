@@ -25,7 +25,7 @@ a:hover {
 }
 
 :focus {
-  outline: none !important; // Évite l'ajout d'un halo bleu autour du lien dans Safari
+  outline: none; // Évite l'ajout d'un halo bleu autour du lien dans Safari
 }
 
 address {
